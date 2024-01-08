@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "BLANK"
+echo "Section 6 : Literal Types"
 
 npm run build
 npm run start

@@ -169,6 +169,87 @@ In Typescript, we have three ways to work with it using:
 
 ## Section 4 : Decorator
 
+### Decorators
+A decorators in TypeScript are a special kind of feature that allows you to enhance or modify your code in a flexible way. 
+They provide a way to attach additional functionality to classes, methods, properties, or parameters.
+
+### Class Decorators
+
+Class decorators are a type of decorator that can be applied to classes.
+They -
+
+* allow you to modify or extend the behavior of a class or its constructor, and can even replace the entire class with a new one.
+
+* receive the class constructor as their target and can be used to add properties, methods, or modify metadata.
+
+* are executed at runtime when the class is defined. By having access to the class constructor, they enable behavior manipulation 
+before any instances are created.
+
+### Method Decorators
+Method decorators are a type of decorator that can be applied to class methods (both instance methods and static methods), allowing
+you to modify or extend the behavior of a specific method. They -
+
+* have the ability to access and modify method arguments, return values, or even replace the method entirely.
+
+* are functions that receive three parameters: the target object (class prototype), the method name, and the property descriptor 
+(an object that describes the attributes and behavior of a property).
+
+* are executed when the class is defined, allowing for modification of method behavior before any instances are created.
+
+### Property Decorators
+Property decorators are a type of decorator that can be applied to class properties (both instance and static). They —
+
+* provide a way to customize or enhance the behavior of specific properties within a class before any instances are instantiated. 
+For example, by using the static method Object.defineProperty you can customize various aspects of a property, such as its value,
+writability, enumerability, and configurability.
+
+* are functions that receive two parameters: the target object (the prototype of the class for an instance member OR the constructor 
+function of the class for a static member) and the property name.
+
+* are executed when the class is defined, not when instances of the class are created.
+
+## Section 5 : Nesting Objects and Types
+
+Objects are what you are dealing with working as a JavaScript developer, and needless to say, that holds true for TypeScript as well.
+TypeScript provides you with multiple ways to define type definitions for object properties. We'll look at a couple of them throughout this post, 
+starting with simple examples and moving on to some advanced type definitions.
+
+Object properties can be assigned type definitions using the type keyword in TypeScript. This is the easiest and preferred method to assign type 
+definitions when dealing with simple objects.
+
+## Section 6 : Literal Types
+
+Literals are exact values that are JavaScript primitives.
+
+They are not very useful on their own but can be combined in a type union to create a powerful (and useful) abstraction e.g.:
+
+```
+type CardinalDirection =
+    | "North"
+    | "East"
+    | "South"
+    | "West";
+```
+
+## Section 7 : Aliases and Interfaces
+
+TypeScript allows types to be defined separately from the variables that use them.
+
+Aliases and Interfaces allows types to be easily shared between different variables/objects.
+
+### Type Aliases
+Type Aliases allow defining types with a custom name (an Alias).
+
+Type Aliases can be used for primitives like string or more complex types such as objects and arrays
+
+## Section 8 : Arrow Functions
+
+## Section 9 : Spread Operator
+
+
+
+
+
 
 
 
@@ -200,3 +281,14 @@ users!: Object;
 * [TypeScript Type Guards Explained - Software Developer Diaries - YouTube](https://www.youtube.com/watch?v=FEeEItMtDwg)
 ## Section 4 : Decorator
 * [TypeScript Decorators in Brief - refine.dev](https://refine.dev/blog/typescript-decorators/#introduction)
+* [TypeScript Decorators: A Comprehensive Guide - Irene Smolchenko - Level Up Coding](https://levelup.gitconnected.com/typescript-decorators-a-comprehensive-guide-3034e0460de9)
+## Section 5 : Nesting Objects and Types
+* [Assign Types To Nested Objects In TypeScript - Manik - hackernoon.com](https://hackernoon.com/assign-types-to-nested-objects-in-typescript)
+* [Using {[key:string]: string} and {[key:string]: any} in TS - Borislav Hadzhiev](https://bobbyhadz.com/blog/typescript-key-string-string)
+## Section 6 : Literal Types
+* [Literal Types - TypeScript Deep Dive](https://basarat.gitbook.io/typescript/type-system/literal-types)
+## Section 7 : Aliases and Interfaces
+* [TypeScript Type Aliases and Interfaces - w3schools.com](https://www.w3schools.com/typescript/typescript_aliases_and_interfaces.php)
+## Section 8 : Arrow Functions
+
+## Section 9 : Spread Operator

@@ -1,32 +1,34 @@
-export class User{
+import {Base} from "./decorators/base";
+import {ProjectDecorator, loggedMethod, writable} from "./decorators/project-decorator";
 
-    private _projectName: string = '';
-    private static userType: string = "Generic";
-    private _email: string;
+@ProjectDecorator({projectName: "Decorator"})
+export class User extends Base {
 
-    public username: string;
-    public addressLine1: string = "";
-    public addressLine2: string = "";
-    public country: string = "";
+    @writable
+    private _usertype: string = "User";
 
-    constructor(projectName: string,username: string, email: string) {
-        this._projectName = projectName;
-        this.username = username;
+    private _email!: string;
+    private _username!: string;
+
+    private _addressLine1!: string;
+    private _addressLine2!: string;
+    private _country!: string;
+
+    constructor(username: string, email: string) {
+        super();
+        this._username = username;
         this._email = email;
     }
 
-
-    get projectName(): string {
-        return this._projectName;
+    @loggedMethod
+    greet(){
+       console.log(`Hello, my name is ${this._username}`);
     }
 
-    set projectName(value: string) {
-        this._projectName = value;
+    get usertype(): string {
+        return this._usertype;
     }
 
-    get userType() {
-        return User.userType;
-    }
 
     get email() {
         return this._email;
@@ -36,7 +38,32 @@ export class User{
         this._email = newEmail;
     }
 
+
+    get addressLine1(): string {
+        return this._addressLine1;
+    }
+
+    set addressLine1(value: string) {
+        this._addressLine1 = value;
+    }
+
+    get addressLine2(): string {
+        return this._addressLine2;
+    }
+
+    set addressLine2(value: string) {
+        this._addressLine2 = value;
+    }
+
+    get country(): string {
+        return this._country;
+    }
+
+    set country(value: string) {
+        this._country = value;
+    }
+
     address(): any {
-        return `${this.addressLine1}\n${this.addressLine2}\n${this.country}`;
+        return `${this._addressLine1}\n${this._addressLine2}\n${this._country}`;
     }
 }
