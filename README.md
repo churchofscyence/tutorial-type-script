@@ -260,10 +260,13 @@ In the above example, sum is an arrow function. (x:number, y:number) denotes the
 function body. The right side of => can contain one or more code statements.
 
 ## Section 9 : Spread Operator
+* Function Overload
+* Destructuring
+* Array Assignment
+* Object Spread
 
 
-
-
+## Section 10 :Rest Parameters
 
 
 
@@ -305,5 +308,8 @@ users!: Object;
 ## Section 7 : Aliases and Interfaces
 * [TypeScript Type Aliases and Interfaces - w3schools.com](https://www.w3schools.com/typescript/typescript_aliases_and_interfaces.php)
 ## Section 8 : Arrow Functions
-
+* [TypeScript - Arrow Functions - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/arrow-function)
 ## Section 9 : Spread Operator
+* [Spread Operator - TypeScript Deep Dive - basarat.gitbook.io](https://basarat.gitbook.io/typescript/future-javascript/spread-operator)
+## Section 10 :Rest Parameters
+* [Rest Parameters - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/rest-parameters)
