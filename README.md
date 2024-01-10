@@ -311,5 +311,3 @@ users!: Object;
 * [TypeScript - Arrow Functions - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/arrow-function)
 ## Section 9 : Spread Operator
 * [Spread Operator - TypeScript Deep Dive - basarat.gitbook.io](https://basarat.gitbook.io/typescript/future-javascript/spread-operator)
-## Section 10 :Rest Parameters
-* [Rest Parameters - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/rest-parameters)
