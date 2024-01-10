@@ -244,11 +244,136 @@ Type Aliases can be used for primitives like string or more complex types such a
 
 ## Section 8 : Arrow Functions
 
+Using fat arrow =>, we dropped the need to use the function keyword. Parameters are passed in the 
+parenthesis (), and the function expression is enclosed within the curly brackets { }.
+
+```
+let sum = (x: number, y: number): number => {
+    return x + y;
+}
+
+sum(10, 20); //returns 30
+```
+
+In the above example, sum is an arrow function. (x:number, y:number) denotes the parameter types,
+:number specifies the return type. The fat arrow => separates the function parameters and the 
+function body. The right side of => can contain one or more code statements.
+
 ## Section 9 : Spread Operator
+* Function Overload
+* Destructuring
+* Array Assignment
+* Object Spread
 
 
+## Section 10 : Array and Object Destructuring
+* 1 Array Destructuring
+* 2 Skipping Items in an Array
+* 3 Skipping Items in an Array
+* 4 Destructuring Assignment with Functions
+* 5 Using Default Values
+* 6 Swapping Values using the Destructuring Assignment
+* 7 Object Destructuring
+* 8 Basic Object Destructuring
+* 9 Basic Object Destructuring
+* 10 Variables declared before being assigned
+* 11 Using a new Variable Name
+* 12 Using Default Values
+* 13 Using Default Values
+* 15 Nesting in Object Destructuring
+* 16 Rest in Object Destructuring
+* 17 Object Destructuring and Functions
 
+## Section 11 : Classes and Interfaces
 
+Interface: Interface is the virtual structure that is used for type-checking. In TypeScript we 
+use interface keyword to create the new interface with identity. It create the structure for the
+same datatype. Interface is the structure which define the properties and method for object with 
+name and type.
+
+## Section 12 : Abstract Class
+Define an abstract class in Typescript using the abstract keyword. Abstract classes are mainly for 
+inheritance where other classes may derive from them. We cannot create an instance of an abstract 
+class.
+
+An abstract class typically includes one or more abstract methods or property declarations. The class 
+which extends the abstract class must define all the abstract methods.
+
+## Section 13 : Singleton
+Singleton is a creational design pattern, which ensures that only one object of its kind exists and 
+provides a single point of access to it for any other code.
+
+Singleton has almost the same pros and cons as global variables. Although they’re super-handy, they 
+break the modularity of your code.
+
+You can’t just use a class that depends on a Singleton in some other context, without carrying over 
+the Singleton to the other context. Most of the time, this limitation comes up during the creation 
+of unit tests.
+
+## Section 14 : Modules
+
+JavaScript has a long history of different ways to handle modularizing code. Having been around since 2012,
+TypeScript has implemented support for a lot of these formats, but over time the community and the JavaScript 
+specification has converged on a format called ES Modules (or ES6 modules). You might know it as the 
+import/export syntax.
+
+ES Modules was added to the JavaScript spec in 2015, and by 2020 had broad support in most web browsers and 
+JavaScript runtimes.
+
+For focus, the handbook will cover both ES Modules and its popular pre-cursor CommonJS module.exports = syntax, 
+and you can find information about the other module patterns in the reference section under Modules.
+
+## Section 15 : Intersection Types
+
+An intersection type creates a new type by combining multiple existing types. The new type has all features of
+the existing types.
+
+To combine types, you use the **&** operator as follows:
+
+```
+type typeAB = typeA & typeB;
+```
+
+The typeAB will have all properties from both typeA and typeB.
+
+## Section 16 : Discriminated Unions
+
+A discriminated union is a TypeScript feature that enables the creation of a type that can represent several different 
+possibilities or variants. By attaching discriminators to each variant, TypeScript's type system can help ensure that we 
+handle all possible cases gracefully. Discriminators can be string literals, numeric literals, or even symbols.
+
+### Why are Discriminated Unions important?
+Using discriminated unions in your TypeScript code brings numerous benefits:
+
+1. Improved Type Safety: With discriminated unions, TypeScript can ensure that all possible variants of a 
+ type are accounted for, eliminating the risk of undefined or unexpected behavior at runtime.
+
+2. Enhanced Autocompletion: IDEs and code editors can leverage the discriminators to provide accurate autocompletion 
+suggestions based on the specific variant being handled.
+
+3. Better Code Maintainability: Discriminated unions make code easier to read and understand by explicitly indicating 
+the possible cases for a given type.
+
+4. Comprehensive Error Handling: TypeScript's static type checking can help us catch missing or mismatched discriminators, 
+reducing the likelihood of introducing bugs.
+
+## Section 17 :  Type Casting
+* as
+* <>
+* Force Casting with ()
+
+## Section 18 :  Index Properties
+In this article, we are going to learn about the Indexed Access Types in TypeScript, TypeScript is a powerful language that allows developers to write code with fewer errors and more safety than JavaScript. One feature that makes TypeScript stand out is the Indexed Access Types. Indexed Access Types provide a way to access the properties of an object using an index signature. In TypeScript, an index signature is a way to define the shape of an object with keys that are not known at compile time.
+
+Syntax:
+
+type ObjectKeyType = keyof ObjectType;
+type PropertyType = ObjectType[ObjectKeyType];
+Where –
+
+ObjectType is the object that we want to access the properties of.
+ObjectKeyType is the type of key that we want to use to access the property.
+PropertyType is the type of property that we want to access.
 
 
 
@@ -290,5 +415,24 @@ users!: Object;
 ## Section 7 : Aliases and Interfaces
 * [TypeScript Type Aliases and Interfaces - w3schools.com](https://www.w3schools.com/typescript/typescript_aliases_and_interfaces.php)
 ## Section 8 : Arrow Functions
-
+* [TypeScript - Arrow Functions - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/arrow-function)
 ## Section 9 : Spread Operator
+* [Spread Operator - TypeScript Deep Dive - basarat.gitbook.io](https://basarat.gitbook.io/typescript/future-javascript/spread-operator)
+## Section 10 : Array and Object Destructuring
+* [How to Use Array and Object Destructuring in JavaScript - Sarah Chima Atuonwu -freecodecamp.org](https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/)
+## Section 11 : Classes and Interfaces
+* [Difference between interfaces and classes in TypeScript - geeksforgeeks.org](https://www.geeksforgeeks.org/difference-between-interfaces-and-classes-in-typescript/)  
+## Section 12 : Abstract Class
+* [TypeScript - Abstract Class - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/abstract-class)
+## Section 13 : Singleton
+* [Singleton in TypeScript - refactoring.guru](https://refactoring.guru/design-patterns/singleton/typescript/example)
+## Section 14 : Modules
+* [Modules - typescriptlang.org](https://www.typescriptlang.org/docs/handbook/2/modules.html)
+## Section 15 : Intersection Types
+* [TypeScript Intersection Types - typescripttutorial.net](https://www.typescripttutorial.net/typescript-tutorial/typescript-intersection-types/)
+## Section 16 : Discriminated Unions
+* [What are TypeScript Discriminated Unions? - Alessio Michelini - dev.to](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb) 
+## Section 17 :  Type Casting
+* [TypeScript Casting - w3schools.com](https://www.w3schools.com/typescript/typescript_casting.php)
+## Section 18 :  Index Properties
+* [TypeScript Indexed Access Types - geeksforgeeks.org](https://www.geeksforgeeks.org/typescript-indexed-access-types/)
