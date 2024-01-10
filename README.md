@@ -244,6 +244,21 @@ Type Aliases can be used for primitives like string or more complex types such a
 
 ## Section 8 : Arrow Functions
 
+Using fat arrow =>, we dropped the need to use the function keyword. Parameters are passed in the 
+parenthesis (), and the function expression is enclosed within the curly brackets { }.
+
+```
+let sum = (x: number, y: number): number => {
+    return x + y;
+}
+
+sum(10, 20); //returns 30
+```
+
+In the above example, sum is an arrow function. (x:number, y:number) denotes the parameter types,
+:number specifies the return type. The fat arrow => separates the function parameters and the 
+function body. The right side of => can contain one or more code statements.
+
 ## Section 9 : Spread Operator
 
 
