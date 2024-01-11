@@ -380,6 +380,10 @@ TypeScript provides the concept of function overloading. You can have multiple
 functions with the same name but different parameter types and return type. However,
 the number of parameters should be the same.
 
+## Section 20 :  Optional Chaining
+The optional chaining (?.) operator accesses an object's property or calls a function. 
+If the object accessed or function called using this operator is undefined or null, the 
+expression short circuits and evaluates to undefined instead of throwing an error.
 
 # Errors
 
@@ -441,3 +445,12 @@ users!: Object;
 * [TypeScript Indexed Access Types - geeksforgeeks.org](https://www.geeksforgeeks.org/typescript-indexed-access-types/)
 ## Section 19 :  Function Overloading
 * [Function Overloading - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/function-overloading)
+## Section 20 :  Optional Chaining
+* [Optional chaining (?.) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+
+
+
+
+
+
+
