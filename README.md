@@ -401,6 +401,15 @@ console.log(baz);
 // Expected output: 0
 ```
 
+## Section 22 :  Generics
+
+Generics allow creating 'type variables' which can be used to create classes, functions & type 
+aliases that don't need to explicitly define the types that they use.
+
+Generics makes it easier to write reusable code.
+
+
+
 
 # Errors
 
@@ -466,8 +475,8 @@ users!: Object;
 * [Optional chaining (?.) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 ## Section 21 :  Nullish coalescing operator (??)
 * [Nullish coalescing operator (??) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-
-
+## Section 22 :  Generics
+* [TypeScript Basic Generics - w3schools.com](https://www.w3schools.com/typescript/typescript_basic_generics.php)
 
 
 
