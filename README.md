@@ -375,7 +375,10 @@ ObjectType is the object that we want to access the properties of.
 ObjectKeyType is the type of key that we want to use to access the property.
 PropertyType is the type of property that we want to access.
 
-
+## Section 19 :  Function Overloading
+TypeScript provides the concept of function overloading. You can have multiple 
+functions with the same name but different parameter types and return type. However,
+the number of parameters should be the same.
 
 
 # Errors
@@ -436,3 +439,5 @@ users!: Object;
 * [TypeScript Casting - w3schools.com](https://www.w3schools.com/typescript/typescript_casting.php)
 ## Section 18 :  Index Properties
 * [TypeScript Indexed Access Types - geeksforgeeks.org](https://www.geeksforgeeks.org/typescript-indexed-access-types/)
+## Section 19 :  Function Overloading
+* [Function Overloading - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/function-overloading)
