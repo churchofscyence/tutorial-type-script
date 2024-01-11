@@ -375,6 +375,39 @@ ObjectType is the object that we want to access the properties of.
 ObjectKeyType is the type of key that we want to use to access the property.
 PropertyType is the type of property that we want to access.
 
+## Section 19 :  Function Overloading
+TypeScript provides the concept of function overloading. You can have multiple 
+functions with the same name but different parameter types and return type. However,
+the number of parameters should be the same.
+
+## Section 20 :  Optional Chaining (?.)
+The optional chaining (?.) operator accesses an object's property or calls a function. 
+If the object accessed or function called using this operator is undefined or null, the 
+expression short circuits and evaluates to undefined instead of throwing an error.
+
+## Section 21 :  Nullish coalescing operator (??)
+
+The nullish coalescing (??) operator is a logical operator that returns its right-hand side
+operand when its left-hand side operand is null or undefined, and otherwise returns its 
+left-hand side operand.
+
+```
+const foo = null ?? 'default string';
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
+
+## Section 22 :  Generics
+
+Generics allow creating 'type variables' which can be used to create classes, functions & type 
+aliases that don't need to explicitly define the types that they use.
+
+Generics makes it easier to write reusable code.
+
 
 
 
@@ -436,3 +469,15 @@ users!: Object;
 * [TypeScript Casting - w3schools.com](https://www.w3schools.com/typescript/typescript_casting.php)
 ## Section 18 :  Index Properties
 * [TypeScript Indexed Access Types - geeksforgeeks.org](https://www.geeksforgeeks.org/typescript-indexed-access-types/)
+## Section 19 :  Function Overloading
+* [Function Overloading - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/function-overloading)
+## Section 20 :  Optional Chaining
+* [Optional chaining (?.) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+## Section 21 :  Nullish coalescing operator (??)
+* [Nullish coalescing operator (??) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+## Section 22 :  Generics
+* [TypeScript Basic Generics - w3schools.com](https://www.w3schools.com/typescript/typescript_basic_generics.php)
+
+
+
+
