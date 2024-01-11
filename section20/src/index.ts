@@ -1,4 +1,4 @@
-console.log("<------------------------- Optional Chaining ------------------------->");
+console.log("<------------------------- Optional Chaining (?.) ------------------------->");
 
 const adventurer = {
     name: 'Alice',

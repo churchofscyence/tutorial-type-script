@@ -380,10 +380,27 @@ TypeScript provides the concept of function overloading. You can have multiple
 functions with the same name but different parameter types and return type. However,
 the number of parameters should be the same.
 
-## Section 20 :  Optional Chaining
+## Section 20 :  Optional Chaining (?.)
 The optional chaining (?.) operator accesses an object's property or calls a function. 
 If the object accessed or function called using this operator is undefined or null, the 
 expression short circuits and evaluates to undefined instead of throwing an error.
+
+## Section 21 :  Nullish coalescing operator (??)
+
+The nullish coalescing (??) operator is a logical operator that returns its right-hand side
+operand when its left-hand side operand is null or undefined, and otherwise returns its 
+left-hand side operand.
+
+```
+const foo = null ?? 'default string';
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
+
 
 # Errors
 
@@ -447,7 +464,8 @@ users!: Object;
 * [Function Overloading - tutorialsteacher.com](https://www.tutorialsteacher.com/typescript/function-overloading)
 ## Section 20 :  Optional Chaining
 * [Optional chaining (?.) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-
+## Section 21 :  Nullish coalescing operator (??)
+* [Nullish coalescing operator (??) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 
 
 
