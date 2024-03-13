@@ -6,12 +6,12 @@
 ## Section 1: Setup
 
 ### Introduction
- 
+
   TypeScript is a cross-platform language developed by Microsoft that adds static type to JavaScript. TypeScript my be used on client-side or server-side which is compiled into JavaScript. The most popular libraries include jQuery, MongoDB, Node.js and DS.js.
 
-  **jQuery** is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animations, and Ajax. 
+  **jQuery** is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animations, and Ajax.
 
-  **MongoDB** is a JavaScript library designed as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas. 
+  **MongoDB** is a JavaScript library designed as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas.
 
   **Node.js** is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
 
@@ -30,44 +30,52 @@ TypeScript is well-established in the Node.js world and used by many companies, 
 ### Setup TypeScript with Node.js
 
 Creating directory and change directories of the work space. From the Command Line Terminal run the following commands.
-```
+
+```bat
 % mkdir section1
-% cd section1 
+% cd section1
 ```
 
-Setup git to save your changes to your files. 
-```
-% git init 
+Setup git to save your changes to your files.
+
+```bat
+% git init
 ```
 
 Create the package.json to manage your changes libaries. The y option will automatically accept all defaults.
-```
+
+```bat
 % npm init -y
 ```
 
 Create source directory.
-```
+
+```bat
 % mkdir src
 ```
 
 Install TypeScript.
-```
-% npm install -D typescript 
+
+```bat
+% npm install -D typescript
 ```
 
 Create the TypeScript configuration file
-```
+
+```bat
 % npx tsc --init
 ```
 
 Change following configuration in the tsconfig file
-```
-"outDir": "./dist", 
-"rootDir": "./src", 
+
+```bat
+"outDir": "./dist",
+"rootDir": "./src",
 ```
 
 Change following configuration in the package.json file
-```
+
+```yaml
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/index.ts"
@@ -75,19 +83,22 @@ Change following configuration in the package.json file
 ```
 
 Build the project
-```
+
+```bat
 % npm run build
 ```
 
 Run the project
-```
+
+```bat
 % npm run start
 ```
 
 ### Jest
 
 Change the package.json file
-```
+
+```yaml
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "jest": "^29.7.0",
@@ -97,7 +108,7 @@ Change the package.json file
 
 Add configuration file jest.config.js
 
-```
+```js
 module.exports = {
     preset: "ts-jest",
     testEnvironment: "node",
@@ -105,7 +116,8 @@ module.exports = {
 ```
 
 Change the tsconfig.json
-```
+
+```yaml
   "exclude": [
     "node_modules", // would be the default
     "src/spec/*"
@@ -113,7 +125,7 @@ Change the tsconfig.json
 ```
 
 Add file in the following directory src/spec/index.spec.ts
-```
+```ts
 describe( 'Index', function (){
 
     beforeEach(function() {
@@ -133,26 +145,27 @@ A tuple is a typed array with a pre-defined length and types for each index.
 
 Tuples are great because they allow each element in the array to be a known type of value.    
 
-``
-// Declare a tuple type
-let x: [string, number];
-// Initialize it
-x = ["hello", 10]; // OK
-// Initialize it incorrectly
-x = [10, "hello"]; // Error
-``
+```ts
+// Declare a tuple type         
+let x: [string, number];        
+// Initialize it        
+x = ["hello", 10]; // OK        
+// Initialize it incorrectly       
+x = [10, "hello"]; // Error         
+```
 Type 'number' is not assignable to type 'string'.
 Type 'string' is not assignable to type 'number'.
 
 ### Enum
 A helpful addition to the standard set of datatypes from JavaScript is the enum. As in languages like C#, an enum is a way of giving more friendly names to sets of numeric values.
 
-```
+```ts
 enum Color {
-Red,
-Green,
-Blue,
+  Red,
+  Green,
+  Blue,
 }
+
 let c: Color = Color.Green;
 
 ```
@@ -170,7 +183,7 @@ In Typescript, we have three ways to work with it using:
 ## Section 4 : Decorator
 
 ### Decorators
-A decorators in TypeScript are a special kind of feature that allows you to enhance or modify your code in a flexible way. 
+A decorators in TypeScript are a special kind of feature that allows you to enhance or modify your code in a flexible way.
 They provide a way to attach additional functionality to classes, methods, properties, or parameters.
 
 ### Class Decorators
@@ -182,7 +195,7 @@ They -
 
 * receive the class constructor as their target and can be used to add properties, methods, or modify metadata.
 
-* are executed at runtime when the class is defined. By having access to the class constructor, they enable behavior manipulation 
+* are executed at runtime when the class is defined. By having access to the class constructor, they enable behavior manipulation
 before any instances are created.
 
 ### Method Decorators
@@ -191,7 +204,7 @@ you to modify or extend the behavior of a specific method. They -
 
 * have the ability to access and modify method arguments, return values, or even replace the method entirely.
 
-* are functions that receive three parameters: the target object (class prototype), the method name, and the property descriptor 
+* are functions that receive three parameters: the target object (class prototype), the method name, and the property descriptor
 (an object that describes the attributes and behavior of a property).
 
 * are executed when the class is defined, allowing for modification of method behavior before any instances are created.
@@ -199,11 +212,11 @@ you to modify or extend the behavior of a specific method. They -
 ### Property Decorators
 Property decorators are a type of decorator that can be applied to class properties (both instance and static). They —
 
-* provide a way to customize or enhance the behavior of specific properties within a class before any instances are instantiated. 
+* provide a way to customize or enhance the behavior of specific properties within a class before any instances are instantiated.
 For example, by using the static method Object.defineProperty you can customize various aspects of a property, such as its value,
 writability, enumerability, and configurability.
 
-* are functions that receive two parameters: the target object (the prototype of the class for an instance member OR the constructor 
+* are functions that receive two parameters: the target object (the prototype of the class for an instance member OR the constructor
 function of the class for a static member) and the property name.
 
 * are executed when the class is defined, not when instances of the class are created.
@@ -211,10 +224,10 @@ function of the class for a static member) and the property name.
 ## Section 5 : Nesting Objects and Types
 
 Objects are what you are dealing with working as a JavaScript developer, and needless to say, that holds true for TypeScript as well.
-TypeScript provides you with multiple ways to define type definitions for object properties. We'll look at a couple of them throughout this post, 
+TypeScript provides you with multiple ways to define type definitions for object properties. We'll look at a couple of them throughout this post,
 starting with simple examples and moving on to some advanced type definitions.
 
-Object properties can be assigned type definitions using the type keyword in TypeScript. This is the easiest and preferred method to assign type 
+Object properties can be assigned type definitions using the type keyword in TypeScript. This is the easiest and preferred method to assign type
 definitions when dealing with simple objects.
 
 ## Section 6 : Literal Types
@@ -223,7 +236,7 @@ Literals are exact values that are JavaScript primitives.
 
 They are not very useful on their own but can be combined in a type union to create a powerful (and useful) abstraction e.g.:
 
-```
+```ts
 type CardinalDirection =
     | "North"
     | "East"
@@ -244,10 +257,10 @@ Type Aliases can be used for primitives like string or more complex types such a
 
 ## Section 8 : Arrow Functions
 
-Using fat arrow =>, we dropped the need to use the function keyword. Parameters are passed in the 
+Using fat arrow =>, we dropped the need to use the function keyword. Parameters are passed in the
 parenthesis (), and the function expression is enclosed within the curly brackets { }.
 
-```
+```ts
 let sum = (x: number, y: number): number => {
     return x + y;
 }
@@ -256,7 +269,7 @@ sum(10, 20); //returns 30
 ```
 
 In the above example, sum is an arrow function. (x:number, y:number) denotes the parameter types,
-:number specifies the return type. The fat arrow => separates the function parameters and the 
+:number specifies the return type. The fat arrow => separates the function parameters and the
 function body. The right side of => can contain one or more code statements.
 
 ## Section 9 : Spread Operator
@@ -286,41 +299,41 @@ function body. The right side of => can contain one or more code statements.
 
 ## Section 11 : Classes and Interfaces
 
-Interface: Interface is the virtual structure that is used for type-checking. In TypeScript we 
+Interface: Interface is the virtual structure that is used for type-checking. In TypeScript we
 use interface keyword to create the new interface with identity. It create the structure for the
-same datatype. Interface is the structure which define the properties and method for object with 
+same datatype. Interface is the structure which define the properties and method for object with
 name and type.
 
 ## Section 12 : Abstract Class
-Define an abstract class in Typescript using the abstract keyword. Abstract classes are mainly for 
-inheritance where other classes may derive from them. We cannot create an instance of an abstract 
+Define an abstract class in Typescript using the abstract keyword. Abstract classes are mainly for
+inheritance where other classes may derive from them. We cannot create an instance of an abstract
 class.
 
-An abstract class typically includes one or more abstract methods or property declarations. The class 
+An abstract class typically includes one or more abstract methods or property declarations. The class
 which extends the abstract class must define all the abstract methods.
 
 ## Section 13 : Singleton
-Singleton is a creational design pattern, which ensures that only one object of its kind exists and 
+Singleton is a creational design pattern, which ensures that only one object of its kind exists and
 provides a single point of access to it for any other code.
 
-Singleton has almost the same pros and cons as global variables. Although they’re super-handy, they 
+Singleton has almost the same pros and cons as global variables. Although they’re super-handy, they
 break the modularity of your code.
 
-You can’t just use a class that depends on a Singleton in some other context, without carrying over 
-the Singleton to the other context. Most of the time, this limitation comes up during the creation 
+You can’t just use a class that depends on a Singleton in some other context, without carrying over
+the Singleton to the other context. Most of the time, this limitation comes up during the creation
 of unit tests.
 
 ## Section 14 : Modules
 
 JavaScript has a long history of different ways to handle modularizing code. Having been around since 2012,
-TypeScript has implemented support for a lot of these formats, but over time the community and the JavaScript 
-specification has converged on a format called ES Modules (or ES6 modules). You might know it as the 
+TypeScript has implemented support for a lot of these formats, but over time the community and the JavaScript
+specification has converged on a format called ES Modules (or ES6 modules). You might know it as the
 import/export syntax.
 
-ES Modules was added to the JavaScript spec in 2015, and by 2020 had broad support in most web browsers and 
+ES Modules was added to the JavaScript spec in 2015, and by 2020 had broad support in most web browsers and
 JavaScript runtimes.
 
-For focus, the handbook will cover both ES Modules and its popular pre-cursor CommonJS module.exports = syntax, 
+For focus, the handbook will cover both ES Modules and its popular pre-cursor CommonJS module.exports = syntax,
 and you can find information about the other module patterns in the reference section under Modules.
 
 ## Section 15 : Intersection Types
@@ -330,7 +343,7 @@ the existing types.
 
 To combine types, you use the **&** operator as follows:
 
-```
+```ts
 type typeAB = typeA & typeB;
 ```
 
@@ -338,23 +351,23 @@ The typeAB will have all properties from both typeA and typeB.
 
 ## Section 16 : Discriminated Unions
 
-A discriminated union is a TypeScript feature that enables the creation of a type that can represent several different 
-possibilities or variants. By attaching discriminators to each variant, TypeScript's type system can help ensure that we 
+A discriminated union is a TypeScript feature that enables the creation of a type that can represent several different
+possibilities or variants. By attaching discriminators to each variant, TypeScript's type system can help ensure that we
 handle all possible cases gracefully. Discriminators can be string literals, numeric literals, or even symbols.
 
 ### Why are Discriminated Unions important?
 Using discriminated unions in your TypeScript code brings numerous benefits:
 
-1. Improved Type Safety: With discriminated unions, TypeScript can ensure that all possible variants of a 
+1. Improved Type Safety: With discriminated unions, TypeScript can ensure that all possible variants of a
  type are accounted for, eliminating the risk of undefined or unexpected behavior at runtime.
 
-2. Enhanced Autocompletion: IDEs and code editors can leverage the discriminators to provide accurate autocompletion 
+2. Enhanced Autocompletion: IDEs and code editors can leverage the discriminators to provide accurate autocompletion
 suggestions based on the specific variant being handled.
 
-3. Better Code Maintainability: Discriminated unions make code easier to read and understand by explicitly indicating 
+3. Better Code Maintainability: Discriminated unions make code easier to read and understand by explicitly indicating
 the possible cases for a given type.
 
-4. Comprehensive Error Handling: TypeScript's static type checking can help us catch missing or mismatched discriminators, 
+4. Comprehensive Error Handling: TypeScript's static type checking can help us catch missing or mismatched discriminators,
 reducing the likelihood of introducing bugs.
 
 ## Section 17 :  Type Casting
@@ -365,33 +378,33 @@ reducing the likelihood of introducing bugs.
 ## Section 18 :  Index Properties
 In this article, we are going to learn about the Indexed Access Types in TypeScript, TypeScript is a powerful language that allows developers to write code with fewer errors and more safety than JavaScript. One feature that makes TypeScript stand out is the Indexed Access Types. Indexed Access Types provide a way to access the properties of an object using an index signature. In TypeScript, an index signature is a way to define the shape of an object with keys that are not known at compile time.
 
-Syntax:
 
+```ts
 type ObjectKeyType = keyof ObjectType;
 type PropertyType = ObjectType[ObjectKeyType];
-Where –
+```
 
-ObjectType is the object that we want to access the properties of.
-ObjectKeyType is the type of key that we want to use to access the property.
-PropertyType is the type of property that we want to access.
+**ObjectType** is the object that we want to access the properties of.      
+**ObjectKeyType** is the type of key that we want to use to access the property.     
+**PropertyType** is the type of property that we want to access.        
 
 ## Section 19 :  Function Overloading
-TypeScript provides the concept of function overloading. You can have multiple 
+TypeScript provides the concept of function overloading. You can have multiple
 functions with the same name but different parameter types and return type. However,
 the number of parameters should be the same.
 
 ## Section 20 :  Optional Chaining (?.)
-The optional chaining (?.) operator accesses an object's property or calls a function. 
-If the object accessed or function called using this operator is undefined or null, the 
+The optional chaining (?.) operator accesses an object's property or calls a function.
+If the object accessed or function called using this operator is undefined or null, the
 expression short circuits and evaluates to undefined instead of throwing an error.
 
 ## Section 21 :  Nullish coalescing operator (??)
 
 The nullish coalescing (??) operator is a logical operator that returns its right-hand side
-operand when its left-hand side operand is null or undefined, and otherwise returns its 
+operand when its left-hand side operand is null or undefined, and otherwise returns its
 left-hand side operand.
 
-```
+```ts
 const foo = null ?? 'default string';
 console.log(foo);
 // Expected output: "default string"
@@ -403,7 +416,7 @@ console.log(baz);
 
 ## Section 22 :  Generics
 
-Generics allow creating 'type variables' which can be used to create classes, functions & type 
+Generics allow creating 'type variables' which can be used to create classes, functions & type
 aliases that don't need to explicitly define the types that they use.
 
 Generics makes it easier to write reusable code.
@@ -419,7 +432,7 @@ src/typeof.ts:4:12 - error TS2564: Property 'amount' has no initializer and is n
 
 4     public amount: number;
 
-#### Answer 
+#### Answer
 [Angular error TS2564: Property 'users' has no initializer and is not definitely assigned in the constructor - stackoverflow.com](https://stackoverflow.com/questions/66052132/angular-error-ts2564-property-users-has-no-initializer-and-is-not-definitely)
 
 users!: Object;
@@ -464,7 +477,7 @@ users!: Object;
 ## Section 15 : Intersection Types
 * [TypeScript Intersection Types - typescripttutorial.net](https://www.typescripttutorial.net/typescript-tutorial/typescript-intersection-types/)
 ## Section 16 : Discriminated Unions
-* [What are TypeScript Discriminated Unions? - Alessio Michelini - dev.to](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb) 
+* [What are TypeScript Discriminated Unions? - Alessio Michelini - dev.to](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb)
 ## Section 17 :  Type Casting
 * [TypeScript Casting - w3schools.com](https://www.w3schools.com/typescript/typescript_casting.php)
 ## Section 18 :  Index Properties
@@ -477,7 +490,3 @@ users!: Object;
 * [Nullish coalescing operator (??) - developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 ## Section 22 :  Generics
 * [TypeScript Basic Generics - w3schools.com](https://www.w3schools.com/typescript/typescript_basic_generics.php)
-
-
-
-
